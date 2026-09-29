@@ -1,0 +1,36 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Streamlit
+.streamlit/
+
+# YOLO / model outputs
+runs/
+*.pt
+*.onnx
+
+# Dataset
+data/
+datasets/
+
+# Results
+results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Python
+*.log
