@@ -1,30 +1,30 @@
-# CV Model Test Framework
+# 🤖 CV Model Test Framework
 
-A lightweight Computer Vision model testing framework for evaluating
+A lightweight and reusable Computer Vision testing framework for evaluating
 YOLO-based object detection models on annotated datasets.
 
-The project provides an automated evaluation pipeline that calculates
-object detection metrics and visualizes model predictions together with
-ground-truth annotations.
+The framework runs object detection models on validation images, compares
+predictions with ground-truth annotations, calculates evaluation metrics,
+and visualizes the results through a Streamlit dashboard.
 
 ---
 
 ## 🚀 Project Overview
 
-This project was developed to create a reusable testing framework for
+This project was developed to create a reusable testing pipeline for
 Computer Vision object detection models.
 
-The framework:
+Instead of evaluating a model manually image by image, the framework
+automates the evaluation process:
 
 - Loads an annotated dataset
 - Loads a YOLO object detection model
 - Runs predictions on validation images
-- Applies confidence filtering
-- Matches predictions with ground-truth annotations
-- Calculates IoU
+- Filters predictions by confidence threshold
+- Matches predictions with ground-truth bounding boxes using IoU
 - Calculates True Positive, False Positive and False Negative values
 - Calculates Precision and Recall
-- Visualizes ground-truth and prediction bounding boxes
+- Visualizes ground-truth and predicted bounding boxes
 - Provides an interactive Streamlit dashboard
 
 ---
@@ -38,10 +38,9 @@ cv-model-test-framework/
 │   └── app.py
 │
 ├── src/
-│   ├── __init__.py
 │   ├── dataset_manager.py
-│   ├── model_runner.py
 │   ├── evaluator.py
+│   ├── model_runner.py
 │   └── visualizer.py
 │
 ├── scripts/
@@ -51,11 +50,7 @@ cv-model-test-framework/
 ├── tests/
 │   └── test_evaluator.py
 │
-├── data/
-│
-├── runs/
-│
 ├── .gitignore
-├── README.md
 ├── requirements.txt
+├── README.md
 └── bus.jpg
